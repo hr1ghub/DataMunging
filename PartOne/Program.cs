@@ -14,17 +14,17 @@ namespace PartOne
             {
                 string line;
                 Regex rgx = new Regex("\\s+");
-                int min_spread = Int32.MaxValue;
+                int min_spread = int.MaxValue;
                 int min_day = 0;
                 while ((line = streamReader.ReadLine()) != null)
                 {
                     var toks = rgx.Split(line.Trim());
                     int day;
-                    if (!Int32.TryParse(toks[0], out day)) {
+                    if (!int.TryParse(toks[0], out day)) {
                         continue;
                     }
-                    int max_temp = Int32.Parse(toks[1].Trim('*'));
-                    int min_temp = Int32.Parse(toks[2].Trim('*'));
+                    int max_temp = int.Parse(toks[1].Trim('*'));
+                    int min_temp = int.Parse(toks[2].Trim('*'));
                     int spread = max_temp - min_temp;
                     if (spread < min_spread)
                     {
