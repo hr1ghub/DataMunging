@@ -25,8 +25,8 @@ namespace PartTwo
                     }
                     int scored_for = int.Parse(toks[6]);
                     int scored_against = int.Parse(toks[8]);
-                    // TODO wait for clarification
-                    int difference = scored_for - scored_against;
+                    // take the absolute value
+                    int difference = Math.Abs(scored_for - scored_against);
                     if (difference < minDifference)
                     {
                         minDifference = difference;

@@ -36,8 +36,8 @@ namespace PartThree
                     }
                     int val_l = int.Parse(toks[col_l].Trim('*'));
                     int val_r = int.Parse(toks[col_r].Trim('*'));
-                    // TODO wait for clarification
-                    int difference = val_l - val_r;
+                    // Absolute works for part one too
+                    int difference = Math.Abs(val_l - val_r);
                     if (difference < minDifference)
                     {
                         minDifference = difference;
